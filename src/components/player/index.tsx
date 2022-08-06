@@ -1,16 +1,7 @@
 import React from "react";
+import { PlayerData } from "../../interfaces/player";
 
-export type PlayerDate = {
-  _id: string;
-  firstname: string;
-  lastname: string;
-  goal: number;
-  salary: number;
-  devise: string;
-  pictureURl: string;
-};
-
-export default function PlayerCard({ player }: { player: PlayerDate }) {
+export default function PlayerCard({ player }: { player: PlayerData }) {
   return (
     <div className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:shadow-xl ease-in-out">
       <a href="#">

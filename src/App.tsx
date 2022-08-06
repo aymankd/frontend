@@ -1,8 +1,13 @@
 import React from "react";
 import Main from "./pages";
-
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+const queryClient = new QueryClient();
 function App() {
-  return <Main />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Main />
+    </QueryClientProvider>
+  );
 }
 
 export default App;
